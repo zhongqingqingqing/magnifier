@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.container {
+  width: 1000px;
+  margin: 50px auto;
+  /* 预防换行带来的空隙 */
+  font-size: 0;
+}
+
+.left-img {
+  display: inline-block;
+  width: 490px;
+  height: 510px;
+  border: 1px solid #eee;
+  margin-right: 16px;
+  /* 默认第一张图片 */
+  background-image: url(./images/imgA_2.jpg);
+  /* 图片不重复 */
+  background-repeat: no-repeat;
+  /* 图片占满容器（全覆盖） */
+  background-size: cover;
+  /* 让子级相对于自己定位 */
+  position: relative;
+}
+
+.right-img {
+  display: inline-block;
+  width: 490px;
+  height: 510px;
+  border: 1px solid #eee;
+  /* 默认第一张图片 */
+  background-image: url(./images/imgA_3.jpg);
+  /* 默认隐藏 */
+  opacity: 0;
+}
+
+/* 遮罩层 */
+.mask {
+  width: 230px;
+  height: 230px;
+  /* 相对于父级定位 */
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(./images/bg.png);
+  /* 默认隐藏 */
+  opacity: 0;
+}
+
+/* 缩略图集合 */
+.bottom-img {
+  width: 490px;
+  height: 60px;
+  margin-top: 10px;
+  /* 让li居中 */
+  text-align: center;
+}
+
+.img-list {
+  display: inline-block;
+}
+
+.img-list li {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+
+  border: 1px solid #eee;
+  /* 选中状态 */
+  /* border: 2px solid #000; */
+  margin: 0 5px;
+  /* 背景动态生成 */
+  /* background-image: url(./images/imgC_1.jpg); */
+}
